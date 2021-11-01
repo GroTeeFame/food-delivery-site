@@ -117,6 +117,25 @@ body {
   max-width: 400px;
 }
 
+.slider-buttons {
+  position: absolute;
+  right: 46px;
+  bottom: 40px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.slider-button {
+  cursor: pointer;
+}
+
+.swiper {
+  position: relative;
+}
+
 .slide-title {
   margin-top: 0px;
   margin-bottom: 15px;
@@ -152,7 +171,18 @@ body {
   font-size: 14px;
   line-height: 23px;
 }
-
+.slide-fall {
+  /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%), url(../img/summer.png) no-repeat / cover; */
+  background-image: url(../img/fall.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-vitamins {
+  /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%), url(../img/summer.png) no-repeat / cover; */
+  background-image: url(../img/vitamins.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .slide-summer {
   /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%), url(../img/summer.png) no-repeat / cover; */
   background-image: url(../img/summer.png);
@@ -367,9 +397,9 @@ body {
 .tabs-content {
   display: flex;
   margin: -18px;
+  justify-content: space-between;
 }
-.tabs-card,
-.benefits-card {
+.tabs-card {
   /* ??????????? */
   margin: 18px;
   max-width: 270px;
@@ -434,6 +464,15 @@ body {
   width: 315px;
 }
 
+.benefits-card {
+  /* ??????????? */
+  margin: 18px;
+  max-width: 270px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
 .benefits-title {
   /* margin-top: 100px;
   margin-bottom: 52px; */
@@ -442,12 +481,14 @@ body {
 }
 
 .benefits-image {
+  align-items: center;
   width: 60px;
   height: 60px;
-  margin: 30px 105px;
+  margin: 30px calc(50% - 30px);
+  /* margin: 30px 50%; */
 }
 
-.benefits-card-content{
+.benefits-card-content {
   /* margin: 0 auto; */
   justify-content: center;
 }
@@ -471,12 +512,12 @@ body {
   color: #49494f;
 }
 
-.footer{
+.footer {
   padding: 40px 0;
   background-color: #f6f6f6;
 }
 
-.footer-wrapper{
+.footer-wrapper {
   display: flex;
   align-items: center;
 }
@@ -485,19 +526,93 @@ body {
   margin-right: 50px;
 }
 
-.footer-link{
+.footer-link {
   font-size: 16px;
   line-height: 23px;
   color: #000000;
   margin-right: 50px;
   text-decoration: none;
 }
-.social-links{
+.social-links {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.social-link{
+.social-link {
   margin-left: 20px;
   text-decoration: none;
+}
+
+@media (max-width: 1260px) {
+  .container {
+    max-width: 960px;
+  }
+  .search-form {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .tabs-content {
+    flex-wrap: wrap;
+  }
+  .tabs-card {
+    flex: 50%;
+    max-width: calc(50% - 36px);
+  }
+  .benefits-card {
+    flex: 25%;
+    max-width: calc(25% - 36px);
+  }
+  .benefits-card-description {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 760px;
+  }
+  .slide {
+    padding: 70px;
+  }
+  .delivery-card {
+    width: calc(50% - 30px);
+  }
+  .benefits-card {
+    flex: 50%;
+    max-width: calc(50% - 36px);
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    max-width: 560px;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .search-form {
+    order: 5;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .promo {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .tabs-card {
+    max-width: 100%;
+  }
+  .delivery-card {
+    flex: 100%;
+  }
+  .footer-logo{
+    margin-right: 15px;
+  }
 }
