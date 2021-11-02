@@ -473,6 +473,7 @@ body {
 
 .benefits-card {
   /* ??????????? */
+
   position: relative;
   margin: 18px;
   max-width: 270px;
@@ -613,6 +614,9 @@ body {
   .container {
     max-width: 760px;
   }
+  .tabs-content-benefits {
+    flex-wrap: wrap;
+  }
   .slide {
     padding: 70px;
   }
@@ -621,7 +625,8 @@ body {
   }
   .benefits-card {
     flex: 50%;
-    max-width: calc(50% - 36px);
+    /* max-width: calc(50% - 36px); */
+    min-width: calc(50% - 36px);
   }
 }
 
@@ -674,14 +679,13 @@ body {
   .benefits-card:hover .benefits-image {
     z-index: -1;
   }
-
 }
 
 .button-outline:hover {
   cursor: pointer;
-  background-color: #FFA871;
+  background-color: #ffa871;
   padding: 15px 25px;
-  border: 2px solid #FFA871;
+  border: 2px solid #ffa871;
   box-sizing: border-box;
   border-radius: 33px;
   font-weight: 500;
@@ -689,4 +693,3 @@ body {
   line-height: 19px;
   color: #fff;
 }
-
